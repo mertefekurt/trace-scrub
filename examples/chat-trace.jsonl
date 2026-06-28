@@ -1,0 +1,2 @@
+{"id":"req_001","messages":[{"role":"user","content":"My email is ada@example.com and my card is 4111 1111 1111 1111."}],"metadata":{"ip":"203.0.113.42"}}
+{"id":"req_002","api_key":"sk-example000000000000000000000000","messages":[{"role":"tool","content":"called billing lookup for +1 415 555 0137"}]}
