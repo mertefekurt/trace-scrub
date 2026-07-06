@@ -1,36 +1,28 @@
-<p align="center">
-  <img src="assets/readme-cover.svg" alt="Trace Scrub cover" width="100%" />
-</p>
-
 # Trace Scrub
 
-![stack](https://img.shields.io/badge/stack-Python-dc2626?style=flat-square) ![python](https://img.shields.io/badge/python-3.10-7c3aed?style=flat-square) ![license](https://img.shields.io/badge/license-MIT-0891b2?style=flat-square) ![ci](https://img.shields.io/badge/ci-GitHub%20Actions-b45309?style=flat-square)
+Redact sensitive values from LLM traces, prompts, and JSONL logs. This repo keeps the work close to the terminal: clear input, predictable output, and no service to babysit.
 
-Redact sensitive values from LLM traces, prompts, and JSONL logs.
+![Trace Scrub cover](assets/readme-cover.svg)
 
-## Good for
+## Where it fits
 
-- quick local checks around trace privacy
-- small CI jobs where a readable report is enough
-- review workflows that need deterministic output
-- examples based on `examples/chat-trace.jsonl`
+- for model evaluation, traces, retrieval, and prompt review
+- quick local checks without a service dependency
+- review notes that should stay easy to reproduce
 
 ## Run it
 
 ```bash
+git clone https://github.com/mertefekurt/trace-scrub.git
+cd trace-scrub
+python -m venv .venv
+source .venv/bin/activate
 python -m pip install -e ".[dev]"
 trace-scrub examples/chat-trace.jsonl
-trace-scrub examples/chat-trace.jsonl --json --fail-on medium
+trace-scrub examples/chat-trace.jsonl --json
 ```
 
-## Project notes
-
-- Command: `trace-scrub`
-- Language: Python
-- Python: `>=3.10`
-- Tests: `pytest`
-
-## Layout
+## Project map
 
 ```text
 .github/        CI workflow
@@ -39,13 +31,4 @@ src/            package source
 tests/          test coverage
 .gitignore      project file
 pyproject.toml  package metadata
-```
-
-## Check locally
-
-```bash
-python -m pip install -e ".[dev]"
-ruff check .
-pytest
-python -m trace_scrub --help
 ```
