@@ -1,14 +1,12 @@
 # Trace Scrub
 
-Redact sensitive values from LLM traces, prompts, and JSONL logs. The repo is kept small on purpose: clone it, run the sample, inspect the output, then adapt the idea.
-
 ![Trace Scrub cover](assets/readme-cover.svg)
 
-## Visual route
+Redact sensitive values from LLM traces, prompts, and JSONL logs.
 
-![Visual map](assets/readme-diagram.svg)
+`Python`
 
-## First run
+## Start here
 
 ```bash
 git clone https://github.com/mertefekurt/trace-scrub.git
@@ -17,7 +15,7 @@ python -m pip install -e ".[dev]"
 trace-scrub examples/chat-trace.jsonl
 ```
 
-## File map
+## Project map
 
 ```text
 .github/        CI workflow
@@ -26,3 +24,9 @@ src/            package source
 tests/          test coverage
 .gitignore      project file
 ```
+
+## Repository
+
+[Open the source on GitHub →](https://github.com/mertefekurt/trace-scrub)
+
+[MIT License](LICENSE)
